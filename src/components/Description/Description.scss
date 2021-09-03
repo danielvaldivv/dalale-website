@@ -1,0 +1,28 @@
+.Description {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  & h3{
+    margin: 20px 0;
+    width: auto;
+    max-width: 500px;
+  }
+  & h4{
+    margin: 20px 0;
+    width: auto;
+    max-width: 400px;
+    color: var(--color1);
+  }
+  & figure {
+    margin: 20px auto;
+
+    & img{
+      width: 150px;
+      border-radius: 40%;
+      box-shadow: 5px 5px 40px 15px rgba(70, 70, 90, 0.45);
+    }
+    
+  }
+}
