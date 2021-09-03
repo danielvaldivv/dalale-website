@@ -1,6 +1,6 @@
 import React from 'react'
 
-import productoImg from '../../assets/picture/productos2.jpg'
+import productoImg from '../../assets/picture/family-eating.jpg'
 
 import './Description.scss'
 
