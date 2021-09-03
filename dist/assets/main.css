@@ -1,0 +1,7 @@
+@import url(https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap);
+nav{display:flex;align-items:center}nav ul{display:flex;gap:15px;list-style-type:none}nav ul h4{font-weight:300}nav ul img{padding:5px;border:1px solid #777777;border-radius:8px}nav ul img:hover{background-color:#437907;border:1px solid #437907}
+
+header{max-width:1024px;width:100%;min-width:340px;height:auto;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between}
+
+:root{--font1: 'Montserrat', sans-serif;--color1: #061a49ef}*{box-sizing:border-box;margin:0;padding:0}html{font-size:62.5%;font-family:var(--font1);min-width:320px;margin:0 auto;color:#333}body{background-color:whitesmoke}#app{height:100vh}h1{font-size:4rem}h2{font-size:3.2rem}h3{font-size:2.4rem}h4{font-size:1.8rem}::-webkit-scrollbar{width:1rem;height:1rem}::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 3px rgba(1,1,1,0.5);border-radius:10px}::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(1,1,1,0.5)}
+

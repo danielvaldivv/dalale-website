@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  align-items: center;
+
+  & ul {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+
+    & h4{
+      font-weight: 300;
+    }
+
+    & img{
+      padding: 5px;
+      border: 1px solid #777777;
+      border-radius: 8px;
+    }
+    & img:hover {
+      background-color: #437907;
+      border: 1px solid #437907;
+    }
+    
+  }
+}
