@@ -8,11 +8,15 @@ import Information from '../containers/Information/Information'
 import Payment from '../containers/Payment/Payment'
 import Success from '../containers/Success/Success'
 import Error404 from '../containers/Error404/Error404'
+import useInitialState from '../hooks/useInitialState'
+import AppContext from '../context/AppContext'
 
 
-function App() {
+const App = () => {
+  const initialState = useInitialState();
   return (
-    <BrowserRouter>
+    <AppContext.Provider value={initialState}>
+      <BrowserRouter>
       <Layout>
         <Switch>
           <Route exact path='/' component={Home} />
@@ -24,6 +28,7 @@ function App() {
         </Switch>
       </Layout>
     </BrowserRouter>
+    </AppContext.Provider>
   )
 }
 

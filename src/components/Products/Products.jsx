@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AppContext from '../../context/AppContext'
 import Product from '../Product/Product'
 import './Products.scss'
 
-function Products() {
+const Products = () => {
+  const { state } = useContext(AppContext);
+  const { products } = state;
+
   return (
     <section className="Products">
       <h1>Productos</h1>
-      <Product/>
-      <Product/>
-      <Product/>
+
+      {products.map( (product) => (
+        <Product
+          key={product.id}
+          product={product}
+        />
+        ))
+      }
     </section>
   )
 }
