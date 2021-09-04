@@ -1,7 +1,7 @@
 .Description {
   padding: 5px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
 
   & h3{
@@ -23,6 +23,5 @@
       border-radius: 25%;
       box-shadow: 5px 5px 10px 15px rgba(70, 70, 90, 0.2);
     }
-
   }
 }
