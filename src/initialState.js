@@ -1,5 +1,5 @@
 export default {
-  cart: [],
+  cart: [5],
   buyer: [],
   orders: [],
   products: [
