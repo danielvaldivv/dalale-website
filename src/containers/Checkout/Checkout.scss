@@ -1,32 +1,109 @@
 .Checkout {
-  margin: 50px auto;
-  width: 90%;
-  height: auto;
+  max-width: 1024px;
+  margin: 0 auto;
+  height:50vh;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 2rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+  padding: 10px;
 
-  & h4, h3{
-    margin: 0 auto;
-    text-align: center;
-    width: 60%;
-  }
-
-  & .Checkout__comeback {
+  & .Checkout-comeback {
     display: flex;
-    gap: 40px;
     flex-direction: column;
     align-items: center;
-
-    img {
-    border-radius: 50%;
-    background-color: rgba(90, 106, 94, 0.282);
-    box-shadow: 0px 0px 20px 5px rgba(90, 106, 94, 0.282);
+    justify-content: center;
+    h3, h4 {
+      margin: 30px auto
+    }
+    & img {
+      border-radius: 50%;
+      background-color: rgba(90, 106, 94, 0.282);
+      box-shadow: 0px 0px 20px 5px rgba(90, 106, 94, 0.282);
     }
 
-    img:hover {
+    &  img:hover {
       background-color: var(--color1);
       box-shadow: 0px 0px 20px 5px rgba(10, 100, 35, 0.45);
     }
+  }
+  & .Checkout-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 0 0;
 
+    & img {
+      margin-inline-start: 10px;
+    }
+
+    & button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+    & button img {
+      padding: 5px;
+      border-radius: 50%;
+    }
+
+    & button img:hover {
+      cursor: pointer;
+      background-color: #cc2129;
+    }
+
+    & .Checkout-element {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      border-bottom: 1px solid #eee;
+
+      & img {
+        border-radius: 50%;
+      }
+
+    }
   }
 
+  & .Checkout-sidebar {
+    h3 {
+      text-align: end;
+    }
+    & button {
+      box-shadow: inset 0px 1px 0px 0px #9aff26;
+      background: linear-gradient(to bottom, #83dd1c 5%, var(--color1) 100%);
+      background-color: #83dd1c;
+      border-radius: 6px;
+      border: 1px solid var(--color1);
+      display: inline-block;
+      color: #253c0b;
+      cursor: pointer;
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 6px 24px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #66ac16;
+      width: 100%;
+      display: block;
+      outline: none;
+    }
+  }
 
+  & .Checkout-sidebar button:hover {
+    background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+    box-shadow: inset 0px 1px 0px 0px #bee2f9;
+    background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+    background-color: #63b8ee;
+    border: 1px solid #3866a3;
+    color: #14396a;
+    text-shadow: 0px 1px 0px #7cacde;
+  }
+
+  & a {
+    text-decoration: none;
+  }
 }
+
+

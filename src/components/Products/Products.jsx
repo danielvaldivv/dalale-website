@@ -4,8 +4,12 @@ import Product from '../Product/Product'
 import './Products.scss'
 
 const Products = () => {
-  const { state } = useContext(AppContext);
+  const { state , addToCart } = useContext(AppContext);
   const { products } = state;
+
+  const handleAddToCart = product => () => {
+    addToCart(product);
+  }
 
   return (
     <section className="Products">
@@ -15,6 +19,7 @@ const Products = () => {
         <Product
           key={product.id}
           product={product}
+          handleAddToCart={handleAddToCart}
         />
         ))
       }

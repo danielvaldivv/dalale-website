@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Product.scss'
 
-const Product = ({ product }) => (
+const Product = ({ product, handleAddToCart }) => (
     <section className="Product">
       <img src={product.image} alt="Product" width="240px" />
       <div className="Product__description">
@@ -10,7 +10,9 @@ const Product = ({ product }) => (
         <h1><span>$ {product.price}</span></h1>
         <p>{product.description}</p>
       </div>
-      <button type="button">Añadir</button>
+      <button type="button" onClick={handleAddToCart(product)}>
+        Añadir
+      </button>
     </section>
 )
 

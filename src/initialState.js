@@ -1,5 +1,5 @@
 export default {
-  cart: [5],
+  cart: [],
   buyer: [],
   orders: [],
   products: [
@@ -20,7 +20,7 @@ export default {
     {
       id: '3',
       image: 'https://i.ibb.co/TBfyJ0D/hummus.jpg',
-      title: 'Humus de Garbanzo',
+      title: 'Humus ',
       price: 10000,
       description: 'Maravillozo Humus de Garbanzos que te sientan a compartir con el mismisimo buda.',
     },
