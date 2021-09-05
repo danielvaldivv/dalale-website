@@ -1,6 +1,6 @@
 .Product {
   width: 90%;
-  height: auto;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,12 +8,20 @@
   text-align: center;
   border-radius: 10px;
   box-shadow: 2px 2px 40px 5px rgba(70, 70, 90, 0.2);
+
+  & .Product-content {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   & .Product__description {
     padding: 15px;
   }
   & img {
     margin: 10px auto;
-    border-radius: 50%;
+    border-radius: 100%;
   }
   & button {
     background: linear-gradient(to bottom, #83dd1c 5%, var(--color1) 100%);

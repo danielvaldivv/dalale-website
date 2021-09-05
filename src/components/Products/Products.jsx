@@ -12,18 +12,19 @@ const Products = () => {
   }
 
   return (
-    <section className="Products">
+    <>
       <h1>Productos</h1>
-
-      {products.map( (product) => (
-        <Product
-          key={product.id}
-          product={product}
-          handleAddToCart={handleAddToCart}
-        />
-        ))
-      }
-    </section>
+      <section className="Products">
+        {products.map( (product) => (
+          <Product
+            key={product.id}
+            product={product}
+            handleAddToCart={handleAddToCart}
+          />
+          ))
+        }
+      </section>
+    </>
   )
 }
 
