@@ -14,9 +14,9 @@ function Navbar() {
         <li>
           <Link to="/checkout">
             <img
-            src={cartImg}
-            alt="Carrito de Compras"
-            width="30px"
+              src={cartImg}
+              alt="Carrito de Compras"
+              width="30px"
             />
           </Link>
         </li>

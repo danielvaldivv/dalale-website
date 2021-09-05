@@ -5,6 +5,6 @@ import App from './routes/App'
 import './index.css'
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('app')
+    <App/>,
+    document.getElementById('app')
 )

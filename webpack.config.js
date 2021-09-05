@@ -65,7 +65,7 @@ module.exports = {
     },
     compress: true,
     historyApiFallback: true,
-    open:'chorme',
+    open:true,
     port: 3007,
   },
 };

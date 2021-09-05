@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import LogoDalaleColor from '../../assets/logo/LOGO.png'
 
 function Logo() {
@@ -12,7 +13,7 @@ function Logo() {
           width=" 120px"
           height="auto"
         />
-    </figure>
+      </figure>
     </Link>
   )
 }
