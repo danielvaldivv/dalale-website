@@ -1,12 +1,18 @@
 header {
-  max-width: 1024px;
   width: 100%;
-  min-width: 340px;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
   position: fixed;
+  left: 0;
+  right: 0;
   background-color: whitesmoke;
+
+  & section {
+    max-width: 1024px;
+    width: 100%;
+    min-width: 340px;
+    margin: 0 auto;
+    height: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

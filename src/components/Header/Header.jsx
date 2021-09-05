@@ -8,8 +8,10 @@ import './Header.scss'
 function Header() {
   return (
     <header>
+      <section>
       <Logo/>
       <NavBar/>
+      </section>
     </header>
   )
 }
