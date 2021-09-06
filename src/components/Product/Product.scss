@@ -9,7 +9,7 @@
   text-align: center;
   border-radius: 10px;
   box-shadow: 2px 2px 40px 5px rgba(70, 70, 90, 0.2);
-  
+
   & h2 {
     margin-top: 15px;
   }
@@ -75,7 +75,8 @@
 .Product-card.rotated > .Product-back{
   transform: perspective(600px) rotateY(0deg);
 }
-.read-more {
+.read {
   cursor: pointer;
   padding: 10px;
+  color: #2c669b;
 }

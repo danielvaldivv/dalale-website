@@ -22,7 +22,7 @@ export default {
       image: 'https://i.ibb.co/TBfyJ0D/hummus.jpg',
       title: 'Humus ',
       price: 10000,
-      description: 'Maravillozo Humus de Garbanzos que te sientan a compartir con el mismisimo buda.',
+      description: 'Maravilloso Humus de Garbanzos que te sientan a compartir con el mismisimo buda.',
     },
   ],
 };

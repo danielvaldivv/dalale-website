@@ -20,7 +20,7 @@ const Product = ({ product, handleAddToCart }) => {
                 <p>{product.description}</p>
               </div>
             </div>
-            <p className="read-more" onClick={onRotate}  >Leer más...</p>
+            <p className="read" onClick={onRotate}  >Leer más...</p>
 
           </div>
           <div className="Product-back">
@@ -29,7 +29,7 @@ const Product = ({ product, handleAddToCart }) => {
                 <p>{product.description}</p>
               </div>
             </div>
-            <p className="read-more" onClick={onRotate} >Leer menos...</p>
+            <p className="read" onClick={onRotate} >Leer menos...</p>
           </div>
         </section>
           <button type="button" onClick={handleAddToCart(product)}>
