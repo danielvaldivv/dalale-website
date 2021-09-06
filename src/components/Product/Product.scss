@@ -1,13 +1,13 @@
 .Product {
   width: 90%;
   max-width: 350px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 2px 2px 40px 5px rgba(70, 70, 90, 0.2);
 
   & .Product-content {
     height: 420px;
@@ -40,4 +40,35 @@
   & button:hover {
     background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
   }
+}
+.Product-card {
+  position: absolute;
+  width: 320px;
+  height: 500px;
+  box-shadow: 2px 2px 40px 5px rgba(70, 70, 90, 0.2);
+}
+.Product-front, .Product-back {
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+
+.Product-front {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.Product-back{
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.Product-card.rotated > .Product-front{
+  transform: perspective(600px) rotateY(180deg);
+}
+.Product-card.rotated > .Product-back{
+  transform: perspective(600px) rotateY(0deg);
+}
+.read-more {
+  cursor: pointer;
+  padding: 10px;
 }
