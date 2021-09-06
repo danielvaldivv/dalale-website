@@ -56,7 +56,7 @@
 }
 .Product-front, .Product-back {
   overflow: hidden;
-  backface-visibility: hidden;
+  backface-visibility:hidden;
   position: absolute;
   transition: transform .6s linear;
 }
