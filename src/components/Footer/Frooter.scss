@@ -20,17 +20,21 @@
     & p{
       font-size: 1.5rem;
       padding: 3px;
-      width: 335px;
+      width: 330px;
     }
 
     & .index-footer-contact {
-      width: 329px;
+      width: 320px;
       height: auto;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
       list-style-type: none;
+
+      & p{
+      width: 100px;
+      }
 
       & span {
         color: #333;
