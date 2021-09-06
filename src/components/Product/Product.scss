@@ -1,16 +1,21 @@
 .Product {
+  position: relative;
   width: 90%;
   max-width: 350px;
-  height: 500px;
+  height: 560px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   border-radius: 10px;
+  box-shadow: 2px 2px 40px 5px rgba(70, 70, 90, 0.2);
+  
+  & h2 {
+    margin-top: 15px;
+  }
 
   & .Product-content {
-    height: 420px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +29,8 @@
     border-radius: 100%;
   }
   & button {
+    position: absolute;
+    bottom: 0;
     background: linear-gradient(to bottom, #83dd1c 5%, var(--color1) 100%);
     width: 100%;
     padding: 10px;
@@ -44,8 +51,8 @@
 .Product-card {
   position: absolute;
   width: 320px;
-  height: 500px;
-  box-shadow: 2px 2px 40px 5px rgba(70, 70, 90, 0.2);
+  height: 100px;
+  margin-top: 320px;
 }
 .Product-front, .Product-back {
   overflow: hidden;
