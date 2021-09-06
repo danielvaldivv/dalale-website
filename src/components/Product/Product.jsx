@@ -29,12 +29,12 @@ const Product = ({ product, handleAddToCart }) => {
                 <p>{product.description}</p>
               </div>
             </div>
-            <p className="read" onClick={onRotate} >Leer menos...</p>
+            <p className="read" onClick={onRotate} >Regresar</p>
           </div>
         </section>
-          <button type="button" onClick={handleAddToCart(product)}>
-              Añadir
-          </button>
+        <button className="button-add" type="button" onClick={handleAddToCart(product)}>
+            Añadir
+        </button>
       </div>
     )
   }

@@ -28,7 +28,7 @@
     margin: 10px auto;
     border-radius: 100%;
   }
-  & button {
+  & .button-add {
     position: absolute;
     bottom: 0;
     background: linear-gradient(to bottom, #83dd1c 5%, var(--color1) 100%);
@@ -44,7 +44,8 @@
     font-weight: 500;
     color: black;
   }
-  & button:hover {
+
+  & .button-add:hover {
     background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
   }
 }
@@ -58,7 +59,7 @@
   overflow: hidden;
   backface-visibility:hidden;
   position: absolute;
-  transition: transform .6s linear;
+  transition: transform 600ms ease-in-out;
 }
 
 .Product-front {
@@ -79,4 +80,8 @@
   cursor: pointer;
   padding: 10px;
   color: #2c669b;
+  transition: all 300ms ease-out;
+}
+.read:hover {
+  color: #589116;
 }
