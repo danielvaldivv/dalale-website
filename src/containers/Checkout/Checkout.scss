@@ -1,39 +1,45 @@
 .Checkout {
-  max-width: 1024px;
+  max-width: 800px;
   margin: 0 auto;
+  min-height: 65%;
   height:auto;
   display: grid;
-  min-height: 65%;
-  grid-template-columns: 5fr 2fr;
-  grid-gap: 2rem;
-  grid-row-gap: 1.5em;
+  grid-template-columns: repeat(10, 1fr );
+  // grid-template-rows: repeat(auto-fill);
+  grid-gap: 0.5rem;
   padding: 10px;
   padding-top: 100px;
-
-  & .Checkout-content {
+  
+  & .Checkout-list {
+    grid-column: 1/7;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    & .Checkout-comeback {
-      margin-inline-start: 42%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      h3, h4 {
-        margin: 30px auto
-      }
+    align-items: center;
   }
 
+  & .Checkout-content {
+    grid-column: 1/9 ;
+    grid-row: 2/3;
+  }
+  
+  & .Checkout-comeback {
+    margin: 0 20%;
+    grid-column: 1/11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h3, h4 {
+      margin: 30px auto
+    }
+  
     & img {
       border-radius: 50%;
       // background-color: rgba(90, 106, 94, 0.282);
       box-shadow: 0px 0px 20px 5px rgba(90, 106, 94, 0.1);
       border: 1px solid rgba($color: #000000, $alpha: 0.2);
     }
-
+    
     &  img:hover {
       background-color: var(--color1);
       box-shadow: 0px 0px 20px 5px rgba(10, 100, 35, 0.45);
@@ -44,11 +50,11 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 0 0 0;
-
+    
     & img {
       margin-inline-start: 10px;
     }
-
+    
     & button {
       background-color: transparent;
       border: none;
@@ -58,29 +64,38 @@
       padding: 5px;
       border-radius: 50%;
     }
-
+    
     & button img:hover {
       cursor: pointer;
       background-color: #cc2129;
     }
-
+    
     & .Checkout-element {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
       border-bottom: 1px solid #eee;
-
+      
       & img {
         border-radius: 50%;
       }
-
+      
     }
   }
-
+  
   & .Checkout-sidebar {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    flex-wrap: wrap;
+    max-width: 230px;
+    grid-column: 7/11 ;
     h3 {
       text-align: end;
+    }
+    & p{
+      margin-inline-end: 10px;
     }
     & button {
       box-shadow: inset 0px 1px 0px 0px #9aff26;
@@ -102,7 +117,7 @@
       outline: none;
     }
   }
-
+  
   & .Checkout-sidebar button:hover {
     background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
     box-shadow: inset 0px 1px 0px 0px #bee2f9;
@@ -112,10 +127,19 @@
     color: #14396a;
     text-shadow: 0px 1px 0px #7cacde;
   }
-
+  
   & a {
     text-decoration: none;
   }
+
+  
 }
 
+@media (min-width:600px) {
+  & .Checkout {
+    & .Checkout-content {
+      grid-column: 1/8 ;
+    }
+  }
+  }
 
