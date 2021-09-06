@@ -1,14 +1,43 @@
 .Product {
-  position: relative;
+  // position: relative;
   width: 90%;
   max-width: 350px;
-  height: 560px;
+  height: 520px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
   border-radius: 10px;
   box-shadow: 2px 2px 40px 5px rgba(70, 70, 90, 0.2);
+  .Product-card {
+
+    & .Product-front {
+      animation-duration: 300ms;
+      animation-name: blurProductfront;
+      animation-iteration-count: 1;
+
+      @keyframes blurProductfront {
+        0% { filter: blur(20px); }
+        30% { filter: blur(10px); }
+        90% { filter: blur(5px); }
+        100% { filter: blur(0px); }
+      }
+    }
+
+    & .Product-back {
+      animation-duration: 300ms;
+      animation-name: blurProductBack;
+      animation-iteration-count: 1;
+
+      @keyframes blurProductBack {
+        0% { filter: blur(20px); }
+        30% { filter: blur(10px); }
+        90% { filter: blur(5px); }
+        100% { filter: blur(0px); }
+      }
+    }
+  }
 
   & h2 {
     margin-top: 15px;
@@ -29,7 +58,7 @@
     border-radius: 100%;
   }
   & .button-add {
-    position: absolute;
+    // position: absolute;
     bottom: 0;
     background: linear-gradient(to bottom, #83dd1c 5%, var(--color1) 100%);
     width: 100%;
@@ -49,33 +78,34 @@
     background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
   }
 }
-.Product-card {
-  position: absolute;
-  width: 320px;
-  height: 100px;
-  margin-top: 320px;
-}
-.Product-front, .Product-back {
-  overflow: hidden;
-  backface-visibility:hidden;
-  position: absolute;
-  transition: transform 600ms ease-in-out;
-}
 
-.Product-front {
-  transform: perspective(600px) rotateY(0deg);
-}
+// .Product-card {
+//   position: absolute;
+//   width: 320px;
+//   height: 100px;
+//   margin-top: 320px;
+// }
+// .Product-front, .Product-back {
+//   overflow: hidden;
+//   backface-visibility:hidden;
+//   position: absolute;
+//   transition: transform 600ms ease-in-out;
+// }
 
-.Product-back{
-  transform: perspective(600px) rotateY(-180deg);
-}
+// .Product-front {
+//   transform: perspective(600px) rotateY(0deg);
+// }
 
-.Product-card.rotated > .Product-front{
-  transform: perspective(600px) rotateY(180deg);
-}
-.Product-card.rotated > .Product-back{
-  transform: perspective(600px) rotateY(0deg);
-}
+// .Product-back{
+//   transform: perspective(600px) rotateY(-180deg);
+// }
+
+// .Product-card.rotated > .Product-front{
+//   transform: perspective(600px) rotateY(180deg);
+// }
+// .Product-card.rotated > .Product-back{
+//   transform: perspective(600px) rotateY(0deg);
+// }
 .read {
   cursor: pointer;
   padding: 10px;
