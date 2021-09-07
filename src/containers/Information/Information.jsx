@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import AppContext from '../../context/AppContext'
 
+import './Information.scss'
+
 const Information = () => {
   const { state } = useContext(AppContext)
   const { cart } = state
@@ -11,15 +13,15 @@ const Information = () => {
     <section className="Information">
       <section className="Information-content">
         <div className="Information-head">
-          <h2>Información de contacto:</h2>
+          <h4>Información de contacto:</h4>
         </div>
 
         <section className="Information-form">
           <form>
             <input type="text" placeholder="Apellidos completos" />
             <input type="text" placeholder="Nombres completos" />
-            <input type="text" placeholder="Correo electronico" />
-            <input type="number" placeholder="Teléfono" />
+            <input type="email" placeholder="Correo electronico" />
+            <input type="tel" placeholder="Teléfono" />
             <input type="text" placeholder="Departamento" />
             <input type="text" placeholder="Ciudad" />
             <input type="text" placeholder="Barrio" />
@@ -41,17 +43,22 @@ const Information = () => {
         </section>
 
         <section className="Information-sidebar">
-          <h3>Predido:</h3>
+          <h3>Pedido:</h3>
           {
             cart.map(item => (
               <div className="Information-item" key={item.title}>
                 <div className="Information-element">
-                  <h4>{item.title} </h4>
-                  <span>{item.price}</span>
+                  <p>{`1 ${item.title}`}</p>
+                  <span className="Information-element-price"><h4>${item.price}</h4></span>
                 </div>
               </div>
             ))
           }
+          <hr/>
+          <div className="Information-totalCost">
+          <p>Total:</p>
+          <h3>$ 10000</h3>
+          </div>
         </section>
       </section>
     </section>
