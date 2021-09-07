@@ -57,7 +57,7 @@ const Information = () => {
           <hr/>
           <div className="Information-totalCost">
           <p>Total:</p>
-          <h3>$ 10000</h3>
+          <h4>$ 10000</h4>
           </div>
         </section>
       </section>
