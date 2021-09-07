@@ -39,16 +39,18 @@ const Product = ({ product, handleAddToCart }) => {
               </div>
               <p className="read" onClick={onVisible} >Leer más...</p>
             </div>
-            
+
           : <div className="Product-back">
               <div className="Product-content">
                 <div className="Product__description">
-                  <p>{product.description}</p>
+                  <p className="text-back">{product.preparation}</p>
+                  <p className="text-back">{product.readMore}</p>
+                  <p className="text-back">{product.benefits}</p>
                 </div>
-              </div>
               <p className="read" onClick={onVisible} >Regresar</p>
+              </div>
             </div>}
-          
+
         </section>
         <button className="button-add" type="button" onClick={handleAddToCart(product)}>
             Añadir

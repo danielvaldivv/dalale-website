@@ -15,7 +15,7 @@ const OrderSummary = () =>{
   }
   return (
     <section className="Information-sidebar">
-      <h3>Pedido:</h3>
+      <h4>Resumen del pedido</h4>
       {
         cart.map(item => (
           <div className="Information-item" key={item.title}>

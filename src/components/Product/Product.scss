@@ -2,7 +2,7 @@
   // position: relative;
   width: 90%;
   max-width: 350px;
-  height: 520px;
+  height: 540px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +10,7 @@
   justify-content: space-between;
   border-radius: 10px;
   box-shadow: 2px 2px 40px 5px rgba(70, 70, 90, 0.2);
+  
   .Product-card {
 
     & .Product-front {
@@ -26,6 +27,12 @@
     }
 
     & .Product-back {
+
+      & .text-back {
+        margin:20px 15px;
+        text-align: left;
+      }
+
       animation-duration: 300ms;
       animation-name: blurProductBack;
       animation-iteration-count: 1;
@@ -36,6 +43,7 @@
         90% { filter: blur(5px); }
         100% { filter: blur(0px); }
       }
+      
     }
   }
 
