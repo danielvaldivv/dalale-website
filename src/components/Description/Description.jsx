@@ -8,8 +8,8 @@ function Description() {
   return (
     <section className="Description">
       <div className="Description-principal">
-        <h3>En Dalalé queremos lo mejor para tí y tu famila.</h3>
-        <h4>Es por esto que te ofrecemos productos para que puedas cocinar las más deliciosas recetas.</h4>
+        <h3>En Dalalé queremos lo mejor para tí y tú famila.</h3>
+        <h4>Es por esto que te ofrecemos los mejores productos para que puedas cocinar las más deliciosas recetas.</h4>
       </div>
       <figure>
         <img src={productoImg} alt="Productos Dalalé" />
