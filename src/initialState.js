@@ -7,7 +7,7 @@ export default {
       id: '1',
       image: 'https://i.ibb.co/RT9pshv/ajo.jpg',
       title: 'Pasta de Ajo',
-      price: 10000,
+      price: 12000,
       description: 'Pasta de ajos con especias maravillosas que traen a tu mente los banquetes preparados en la valhalla',
     },
     {
