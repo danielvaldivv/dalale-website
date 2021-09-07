@@ -13,7 +13,7 @@ const Products = () => {
 
   return (
     <>
-      <h1>Productos</h1>
+      <h1 className="Products-title">Productos</h1>
       <section className="Products">
         {products.map( (product) => (
           <Product

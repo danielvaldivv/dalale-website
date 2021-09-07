@@ -1,17 +1,23 @@
-.Products {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 25px;
-  justify-content: center;
-  margin-block-start: 50px;
+.Products-title{
+  text-align: center;
+  margin: 20px auto;
+  padding-block-end: 15px ;
 }
 
-h1{
-  text-align: center;
-}
+.Products {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    margin-block-start: 0px;
+
+    & h1{
+      text-align: center;
+    }
+  }
 
 @media (min-width:900px) {
   .Products {
