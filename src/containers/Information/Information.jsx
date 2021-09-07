@@ -1,21 +1,15 @@
 import React, { useRef, useContext } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import OrderSummary from '../../components/OrderSummary/OrderSummary'
 
 import AppContext from '../../context/AppContext'
 
 import './Information.scss'
 
 const Information = () => {
-  const { state, addToBuyer } = useContext(AppContext)
+  const { addToBuyer } = useContext(AppContext)
   const form = useRef(null)
-  const { cart } = state
   const history = useHistory();
-
-  const handleSumTotal = () => {
-    const reducer = (accumulator, currentValue) => accumulator + currentValue.price
-    const sum = cart.reduce(reducer, 0);
-    return sum;
-  }
 
   const handleSubmit = () => {
     const formData = new FormData(form.current);
@@ -66,24 +60,7 @@ const Information = () => {
           </div>
         </section>
 
-        <section className="Information-sidebar">
-          <h3>Pedido:</h3>
-          {
-            cart.map(item => (
-              <div className="Information-item" key={item.title}>
-                <div className="Information-element">
-                  <p>{`1 ${item.title}`}</p>
-                  <span className="Information-element-price"><h4>${item.price}</h4></span>
-                </div>
-              </div>
-            ))
-          }
-          <hr/>
-          <div className="Information-totalCost">
-          <p>Total:</p>
-          <h4>$ {handleSumTotal()}</h4>
-          </div>
-        </section>
+        <OrderSummary/>
       </section>
     </section>
   )
