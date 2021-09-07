@@ -20,8 +20,8 @@ const Information = () => {
       state: formData.get('state'),
       city: formData.get('city'),
       neighborhood: formData.get('neighborhood'),
-      direction: formData.get('direction'),
-      houseGroup: formData.get('houseGroup'),
+      address: formData.get('address').replace("#","").toLowerCase(),
+      houseGroup: formData.get('houseGroup').toLowerCase(),
       houseNumber: formData.get('houseNumber'),
     }
     addToBuyer(buyer);
@@ -37,13 +37,13 @@ const Information = () => {
 
         <section className="Information-form">
           <form ref={form}>
-            <input required="required" type="text" placeholder="Nombres completos" name="name" />
-            <input required type="email" placeholder="Correo electronico" name="email" />
-            <input required type="tel" placeholder="Teléfono" name="phone" />
-            <input required type="text" placeholder="Departamento" name="state" />
-            <input required type="text" placeholder="Ciudad" name="city" />
+            <input type="text" placeholder="Nombres completos" name="name" />
+            <input type="email" placeholder="Correo electronico" name="email" />
+            <input type="tel" placeholder="Teléfono" name="phone" />
+            <input type="text" placeholder="Departamento" name="state" />
+            <input type="text" placeholder="Ciudad" name="city" />
             <input type="text" placeholder="Barrio" name="neighborhood" />
-            <input required type="text" placeholder="Dirección" name="direction" />
+            <input type="text" placeholder="Dirección" name="address"/>
             <input type="text" placeholder="Conjunto / Edificio" name="houseGroup" />
             <input type="text" placeholder="Casa / apto" name="houseNumber" />
           </form>

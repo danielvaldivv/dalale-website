@@ -9,7 +9,7 @@ const Payment = ({ history }) => {
   const { cart, buyer } = state;
 
   const paypalOptions = {
-    clientId: 'access_token$sandbox$jntyv8p9fqv354mn$9ced2d16964858a86fe23b5c20aa5d09',
+    clientId: 'access_token$sandbox$jntyv8p9fqv354mn$63f25257e1884e76249efe9c240cbe18',
     intent: 'capture',
     currency: 'USD'
   }
@@ -27,7 +27,7 @@ const Payment = ({ history }) => {
         payment: data
       }
       addNewOrder(newOrder)
-      history.push('/Checkout/Success')
+      history.push('/checkout/success')
     }
   }
 
