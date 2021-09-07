@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/old-path"
-  to = "/new-path"
-  status = 201
-  query = {path = ":path"}
