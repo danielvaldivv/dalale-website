@@ -1,13 +1,38 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useRef, useContext } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 
 import AppContext from '../../context/AppContext'
 
 import './Information.scss'
 
 const Information = () => {
-  const { state } = useContext(AppContext)
+  const { state, addToBuyer } = useContext(AppContext)
+  const form = useRef(null)
   const { cart } = state
+  const history = useHistory();
+
+  const handleSumTotal = () => {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue.price
+    const sum = cart.reduce(reducer, 0);
+    return sum;
+  }
+
+  const handleSubmit = () => {
+    const formData = new FormData(form.current);
+    const buyer = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      state: formData.get('state'),
+      city: formData.get('city'),
+      neighborhood: formData.get('neighborhood'),
+      direction: formData.get('direction'),
+      houseGroup: formData.get('houseGroup'),
+      houseNumber: formData.get('houseNumber'),
+    }
+    addToBuyer(buyer);
+    history.push('/checkout/payment');
+  }
 
   return (
     <section className="Information">
@@ -17,17 +42,16 @@ const Information = () => {
         </div>
 
         <section className="Information-form">
-          <form>
-            <input type="text" placeholder="Apellidos completos" />
-            <input type="text" placeholder="Nombres completos" />
-            <input type="email" placeholder="Correo electronico" />
-            <input type="tel" placeholder="Teléfono" />
-            <input type="text" placeholder="Departamento" />
-            <input type="text" placeholder="Ciudad" />
-            <input type="text" placeholder="Barrio" />
-            <input type="text" placeholder="Dirección" />
-            <input type="text" placeholder="Conjunto / Edificio" />
-            <input type="text" placeholder="Casa / apto" />
+          <form ref={form}>
+            <input required="required" type="text" placeholder="Nombres completos" name="name" />
+            <input required type="email" placeholder="Correo electronico" name="email" />
+            <input required type="tel" placeholder="Teléfono" name="phone" />
+            <input required type="text" placeholder="Departamento" name="state" />
+            <input required type="text" placeholder="Ciudad" name="city" />
+            <input type="text" placeholder="Barrio" name="neighborhood" />
+            <input required type="text" placeholder="Dirección" name="direction" />
+            <input type="text" placeholder="Conjunto / Edificio" name="houseGroup" />
+            <input type="text" placeholder="Casa / apto" name="houseNumber" />
           </form>
         </section>
 
@@ -36,7 +60,7 @@ const Information = () => {
             <Link to="/checkout"><p>Regresar</p></Link>
           </div>
           <div className="Information-next">
-          <button type="button">
+          <button type="button" onClick={handleSubmit}>
             Pagar
           </button>
           </div>
@@ -57,7 +81,7 @@ const Information = () => {
           <hr/>
           <div className="Information-totalCost">
           <p>Total:</p>
-          <h4>$ 10000</h4>
+          <h4>$ {handleSumTotal()}</h4>
           </div>
         </section>
       </section>

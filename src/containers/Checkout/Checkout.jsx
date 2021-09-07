@@ -56,7 +56,7 @@ const Checkout = () => {
           <div className="Checkout-sidebar">
               <p>Total:</p>
               <h4>{`  $ ${handleSumTotal()}`}</h4>
-              <Link to="/Checkout/Information">
+              <Link to ='/checkout/information' >
                 <button type="button">Continuar</button>
               </Link>
           </div>
