@@ -37,7 +37,7 @@ const Product = ({ product, handleAddToCart }) => {
                   <p>{product.description}</p>
                 </div>
               </div>
-              <p className="read" onClick={onVisible}  >Leer más...</p>
+              <p className="read" onClick={onVisible} >Leer más...</p>
             </div>
             
           : <div className="Product-back">
