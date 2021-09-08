@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { PayPalButton } from 'react-paypal-button-v2'
+import { Helmet } from 'react-helmet'
 import OrderSummary from '../../components/OrderSummary/OrderSummary'
 import AppContext from '../../context/AppContext'
 import './Payment.scss'
@@ -38,21 +39,26 @@ const Payment = ({ history }) => {
   }
 
   return (
-  <div className="Payment">
-    <div className="Payment-content">
-      <OrderSummary/>
-      <div className="Payment-button">
-        <PayPalButton
-              paypalOptions={paypalOptions}
-              buttonStyles={buttonStyles}
-              amount={handleSumTotal()}
-              onSuccess={data => handlePaymentSuccess(data)}
-              onError={error => console.log(error)}
-              onCancel={data => console.log(data)}
-            />
+    <>
+    <Helmet>
+      <title>Dalalé Gastronomía | Payment</title>
+    </Helmet>
+      <div className="Payment">
+        <div className="Payment-content">
+          <OrderSummary/>
+          <div className="Payment-button">
+            <PayPalButton
+                  paypalOptions={paypalOptions}
+                  buttonStyles={buttonStyles}
+                  amount={handleSumTotal()}
+                  onSuccess={data => handlePaymentSuccess(data)}
+                  onError={error => console.log(error)}
+                  onCancel={data => console.log(data)}
+                />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </>
   )
 }
 export default Payment

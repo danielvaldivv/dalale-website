@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
+import { Helmet } from 'react-helmet'
+
 import AppContext from '../../context/AppContext';
 import Map from '../../components/Map/Map';
 import useGoogleAddress from '../../hooks/useGoogleAddress';
+
 import './Success.scss';
 
 const Success = () => {
@@ -19,15 +22,20 @@ const Success = () => {
 
 
   return (
-    <div className="Success">
-      <div className="Success-content">
-        <h2>{`${buyer[0].name}, Gracias por tu compra`}</h2>
-        <span><p>Tu pedido llegará en 3 días a tu dirección.</p></span>
-        <div className="Success-map">
-          <Map data={locationVerified} />
+    <>
+      <Helmet>
+        <title>Dalalé Gastronomía | Success</title>
+      </Helmet>
+      <div className="Success">
+        <div className="Success-content">
+          <h2>{`${buyer[0].name}, Gracias por tu compra`}</h2>
+          <span><p>Tu pedido llegará en 3 días a tu dirección.</p></span>
+          <div className="Success-map">
+            <Map data={locationVerified} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,7 @@
 import React, { useRef, useContext } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+
 import OrderSummary from '../../components/OrderSummary/OrderSummary'
 
 import AppContext from '../../context/AppContext'
@@ -29,6 +31,10 @@ const Information = () => {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>Dalalé Gastronomía | Information Form</title>
+    </Helmet>
     <section className="Information">
       <section className="Information-content">
         <div className="Information-head">
@@ -63,6 +69,7 @@ const Information = () => {
         <OrderSummary/>
       </section>
     </section>
+    </>
   )
 }
 

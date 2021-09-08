@@ -9,7 +9,7 @@ import './Home.scss'
 const Home= () => (
   <main>
     <Helmet>
-      <title>Dalale Gastronomía</title>
+      <title>Dalale Gastronomía | Home</title>
       <meta name="twitter:card" content="summary_large_image"/>
       <meta name="twitter:site" content="@danielvaldivv"/>
       <meta name="twitter:creator" content="@danielvaldivv"/>
