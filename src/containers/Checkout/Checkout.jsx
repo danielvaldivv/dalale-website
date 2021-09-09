@@ -26,6 +26,9 @@ const Checkout = () => {
 
     return (
       <>
+      <Helmet>
+            <title>Dalalé Gastronomía </title>
+          </Helmet>
       <div className="Checkout">
         {cart.length > 0 ? (
           <h3 className ="Checkout-list">Lista de Pedidos:</h3>
@@ -39,14 +42,11 @@ const Checkout = () => {
 
       {cart.length > 0 && (
         <>
-          <Helmet>
-            <title>Dalalé Gastronomía | Checkout</title>
-          </Helmet>
           <section className="Checkout-content">
           {cart.map((item, index) => (
             <div className="Checkout-item" key={item.title}>
                 <div className="Checkout-element">
-                  <img src={item.image} alt={item.title} width="50px" />
+                  <img className="Checkout-element-product" src={item.image} alt={item.title} />
                   <p>{item.title}</p>
                   <span><p>$ {item.price}</p></span>
                   <p>0</p>
