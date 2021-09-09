@@ -64,6 +64,8 @@
   & img {
     margin: 10px auto;
     border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   & .button-add {
     // position: absolute;
