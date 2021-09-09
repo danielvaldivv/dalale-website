@@ -8,13 +8,13 @@
   & .Description-principal {
     grid-column: 1/6;
     grid-row: 1/2;
-    margin-inline-start: 10px;
+    padding-inline-start: 8px;
+
     & h3{
       margin: 20px 0;
       width: auto;
       max-width: 500px;
     }
-      
       & h4{
         margin: 20px 0;
         width: auto;
@@ -22,29 +22,54 @@
         color: var(--color1);
       }
   }
+  & .figure-family {
+    grid-column: 6/11;
+    grid-row: 1/2;
+  }
 
   & figure {
     margin: 20px auto;
-    grid-column: 6/11;
-    grid-row: 1/2;
 
     & img{
-      width: 150px;
-      border-radius: 25%;
+      width: 190px;
+      border-radius: 8px;
       box-shadow: 5px 5px 10px 15px rgba(70, 70, 90, 0.083);
+
+      animation-duration: 350ms;
+      animation-name: blurFamily;
+      animation-iteration-count: 1;
+
+      @keyframes blurFamily {
+        0% { filter: blur(20px); }
+        30% { filter: blur(10px); }
+        90% { filter: blur(5px); }
+        100% { filter: blur(0px); }
+      }
+
     }
   }
 
   & .Description-secondary {
     grid-column: 1/11;
     grid-row: 2/3;
+
     background-color: #447907d0;
-    margin: 40px auto;
+    margin: 50px auto;
     width: 100%;
-    height: 60vh;
-    display: flex;
+    height: 75vh;
+    display: grid;
+    grid-template-columns: repeat( 10, 1fr);
     align-items: center;
-    justify-content: center;
-    padding: 0 25px;
+
+    & .figure-spices {
+      grid-column: 1/6;
+    }
+
+    & h3 {
+      grid-column: 6/11;
+      text-align: end;
+      padding-inline-end: 8px;
+    }
+
   }
 }
